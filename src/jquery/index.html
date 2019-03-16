@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+      <!-- use this cdn for cropperjs css -->
+      <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropper/2.3.3/cropper.css" /> -->
+      <link rel="stylesheet" href="css/cropper.min.css">
+      <style>
+         #canvasContainer{
+         height: 200px;
+         width: 400px;
+         }
+         #canvas{
+         height: 100%;
+         width: 100%;
+         }
+      </style>
+   </head>
+   <body>
+      <button id="btnCrop">Crop</button>
+      <button id="btnReset">Reset</button>
+      <div id="canvasContainer">
+         <input type="file" name="fileInput" id="fileInput" style="opacity: 0; position: absolute;">
+         <canvas id="canvas">your browser does not suppoerts canvas!</canvas>
+      </div>
+      <br><br>
+      <img src="" id="result" crossorigin />
+      <script  src="http://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+      <!-- use this cdn for cropperjs -->
+      <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/cropper/2.3.3/cropper.js"></script> -->
+      <!-- <script src="js/cropper.min.js"></script> -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/cropper/4.0.0/cropper.min.js"></script>
+
+      <script src="js/dropCrop.js"></script>
+      <script>
+         mainCrop(divid="canvasContainer", canvasid="canvas", cropid="btnCrop", resetid="btnReset", inputid="fileInput", resultid="result", aspectRatio=0);
+      </script>
+   </body>
+</html>

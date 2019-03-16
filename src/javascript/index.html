@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <title>Document</title>
+      <!-- use this cdn for cropperjs css -->
+      <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropper/2.3.3/cropper.css" /> -->
+      <link rel="stylesheet" href="css/cropper.css">
+      <style>
+         #canvasContainer{
+         height: 200px;
+         width: 400px;
+         }
+         #canvas{
+         height: 100%;
+         width: 100%;
+         }
+      </style>
+   </head>
+   <body>
+      <button id="btnCrop">Crop</button>
+      <button id="btnReset">Reset</button>
+      <div id="canvasContainer">
+         <input type="file" name="fileInput" id="fileInput" style="opacity: 0; position: absolute;">
+         <canvas id="canvas"></canvas>
+      </div>
+      <br><br>
+      <img src="" id="result" alt="">
+      <!-- use this cdn if you like -->
+      <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.1/cropper.js"></script> -->
+      <script src="js/cropper.js"></script>
+      <script src="js/dropCrop.js"></script>
+      <script>
+         mainCrop(divid="canvasContainer", canvasid="canvas", cropid="btnCrop", resetid="btnReset", inputid="fileInput", resultid="result", aspectRatio=0);
+      </script>
+   </body>
+</html>
+
